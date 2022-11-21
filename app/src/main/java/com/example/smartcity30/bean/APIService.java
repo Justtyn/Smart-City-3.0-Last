@@ -37,7 +37,6 @@ public interface APIService {
      * @GET
      * @Content-Type application/x-www-form-urlencoded
      */
-    @FormUrlEncoded
     @GET("/prod-api/api/service/list")
     Call<AllServiceResult> getAllService();
 }

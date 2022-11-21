@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -28,7 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class AllServiceFragment extends Fragment {
 
     private static final String TAG = "AllServiceFragment";
-    private static final String BASE_URL = String.valueOf(R.string.base_url);
+    private static final String BASE_URL = "http://124.93.196.45:10001";
     private View view;
     private SearchView svServiceSearch;
     private RecyclerView rvServiceList;
@@ -78,7 +79,7 @@ public class AllServiceFragment extends Fragment {
 
     private void initRecyclerView() {
         ServiceFragRecyclerViewAdapter serviceFragRecyclerViewAdapter = new ServiceFragRecyclerViewAdapter(allServiceDataRowBeanList);
-        rvServiceList.setLayoutManager();
+        rvServiceList.setLayoutManager(new GridLayoutManager(this.getActivity(), 3));
         rvServiceList.setAdapter(serviceFragRecyclerViewAdapter);
     }
 

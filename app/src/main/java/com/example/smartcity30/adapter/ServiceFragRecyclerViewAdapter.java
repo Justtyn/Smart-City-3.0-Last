@@ -18,7 +18,8 @@ import java.util.List;
 
 public class ServiceFragRecyclerViewAdapter extends RecyclerView.Adapter<ServiceFragRecyclerViewAdapter.MyViewHolder> {
 
-    private List<AllServiceResult.RowsBean> allServiceDataList = new ArrayList<>();
+    private List<AllServiceResult.RowsBean> allServiceDataList;
+    private static final String BASE_URL = "http://124.93.196.45:10001";
 
     public ServiceFragRecyclerViewAdapter(List<AllServiceResult.RowsBean> allServiceDataList) {
         this.allServiceDataList = allServiceDataList;
@@ -34,7 +35,9 @@ public class ServiceFragRecyclerViewAdapter extends RecyclerView.Adapter<Service
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Glide.with(holder.itemView.getContext())
-                .load(R.string.base_url + allServiceDataList.get(position).getImgUrl())
+                .load(BASE_URL + allServiceDataList.get(position).getImgUrl())
+                .error(R.drawable.ic_baseline_error_24)
+                .timeout(R.drawable.ic_baseline_error_24)
                 .into(holder.iv_service_rv_form_image);
         holder.tv_service_rv_form_name.setText(allServiceDataList.get(position).getServiceName());
     }
