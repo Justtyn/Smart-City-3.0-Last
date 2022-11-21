@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Smart City 3.0</string>
+    <string name="home_page">主页</string>
+    <string name="all_service">全部服务</string>
+    <string name="era_paragon">时代楷模</string>
+    <string name="data_analysis">数据分析</string>
+    <string name="news">新闻</string>
+    <string name="personal_center">个人中心</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+    <string name="enter_home">Enter Home</string>
+    <string name="net_set">Net Set</string>
+    <string name="guide_page_image">Guide Page Image</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="save_username_and_password"><![CDATA[Save Username & Password]]></string>
+    <string name="ip_address_xxx_xxx_xxx_xxx">IP Address : xxx.xxx.xxx.xxx</string>
+    <string name="ip_port_8080">IP Port : 8080</string>
+    <string name="save">Save</string>
+    <string name="return_logo"><![CDATA[<]]></string>
+    <string name="woman">Woman</string>
+    <string name="man">Man</string>
+    <string name="submit">Submit</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="gender">Gender :</string>
+    <string name="service_name">Service Name</string>
+    <string name="base_url">http://124.93.196.45:10001</string>
+</resources>
