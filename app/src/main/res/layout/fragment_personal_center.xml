@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragment.PersonalCenterFragment">
+    tools:context=".ui.FragmentView.PersonalCenterFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="User Name"
+            android:paddingTop="10dp"
+            android:text="@string/user_name"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
@@ -35,8 +36,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/news_list_back_radius_form"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <Button
@@ -44,12 +46,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
-            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:drawableEnd="@drawable/ic_baseline_chevron_right_24"
             android:gravity="start|center"
             android:paddingStart="20dp"
-            android:text="个人信息"
+            android:text="@string/personal_information"
             android:textSize="17sp"
             tools:ignore="RtlSymmetry" />
 
@@ -59,10 +60,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:drawableEnd="@drawable/ic_baseline_chevron_right_24"
             android:gravity="start|center"
             android:paddingStart="20dp"
-            android:text="订单列表"
+            android:text="@string/list_of_orders"
             android:textSize="17sp"
             tools:ignore="RtlSymmetry" />
 
@@ -72,10 +73,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:drawableEnd="@drawable/ic_baseline_chevron_right_24"
             android:gravity="start|center"
             android:paddingStart="20dp"
-            android:text="个人钱包"
+            android:text="@string/my_wallet"
             android:textSize="17sp"
             tools:ignore="RtlSymmetry" />
 
@@ -85,10 +86,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:drawableEnd="@drawable/ic_baseline_chevron_right_24"
             android:gravity="start|center"
             android:paddingStart="20dp"
-            android:text="我的积分"
+            android:text="@string/my_points"
             android:textSize="17sp"
             tools:ignore="RtlSymmetry" />
 
@@ -98,10 +99,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:drawableEnd="@drawable/ic_baseline_chevron_right_24"
             android:gravity="start|center"
             android:paddingStart="20dp"
-            android:text="意见反馈"
+            android:text="@string/feedback"
             android:textSize="17sp"
             tools:ignore="RtlSymmetry" />
 
@@ -112,10 +113,10 @@
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="10dp"
-            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:drawableEnd="@drawable/ic_baseline_chevron_right_24"
             android:gravity="start|center"
             android:paddingStart="20dp"
-            android:text="修改密码"
+            android:text="@string/change_the_password"
             android:textSize="17sp"
             tools:ignore="RtlSymmetry" />
 
@@ -124,11 +125,11 @@
     <Button
         android:id="@+id/btn_sign_out"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/btn_radius_red_form_selector"
-        android:text="Sign Out"
+        android:layout_height="35dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/teal_200"
+        android:text="@string/sign_out"
         android:textColor="@color/white"
         android:textSize="17sp" />
 

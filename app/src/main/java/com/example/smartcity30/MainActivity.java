@@ -11,11 +11,11 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.smartcity30.fragment.AllServiceFragment;
-import com.example.smartcity30.fragment.DataAnalysisFragment;
-import com.example.smartcity30.fragment.EraParagonFragment;
-import com.example.smartcity30.fragment.HomePageFragment;
-import com.example.smartcity30.fragment.PersonalCenterFragment;
+import com.example.smartcity30.ui.FragmentView.AllServiceFragment;
+import com.example.smartcity30.ui.FragmentView.DataAnalysisFragment;
+import com.example.smartcity30.ui.FragmentView.EraParagonFragment;
+import com.example.smartcity30.ui.FragmentView.HomePageFragment;
+import com.example.smartcity30.ui.FragmentView.PersonalCenterFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 

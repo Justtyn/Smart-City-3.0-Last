@@ -1,4 +1,4 @@
-package com.example.smartcity30.fragment;
+package com.example.smartcity30.ui.FragmentView;
 
 import android.os.Bundle;
 

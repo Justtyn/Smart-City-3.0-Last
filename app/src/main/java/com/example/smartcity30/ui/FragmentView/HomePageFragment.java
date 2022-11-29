@@ -1,4 +1,4 @@
-package com.example.smartcity30.fragment;
+package com.example.smartcity30.ui.FragmentView;
 
 import android.os.Bundle;
 
@@ -10,13 +10,13 @@ import android.view.ViewGroup;
 
 import com.example.smartcity30.R;
 
-public class EraParagonFragment extends Fragment {
+public class HomePageFragment extends Fragment {
 
     private View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_era_paragon, container, false);
+        view = inflater.inflate(R.layout.fragment_home_page, container, false);
         return view;
     }
 }
