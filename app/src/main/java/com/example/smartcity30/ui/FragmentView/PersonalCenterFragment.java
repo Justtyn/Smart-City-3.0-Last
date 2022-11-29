@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.smartcity30.LoginActivity;
 import com.example.smartcity30.R;
@@ -24,24 +25,37 @@ import com.example.smartcity30.ui.ActivityView.PersonalInformationActivity;
 
 import java.util.Objects;
 
-public class PersonalCenterFragment extends Fragment implements View.OnClickListener {
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
+public class PersonalCenterFragment extends Fragment {
+
+    private static final String TAG = "PersonalCenterFragment";
+    private final String BASE_URL = "";
     private View view;
     private ImageView ivPersonalAvatar;
     private TextView tvPersonalUsername;
-    private Button btnPersonalInformation;
-    private Button btnListOfOrders;
-    private Button btnMyWallet;
-    private Button btnMyPoints;
-    private Button btnFeedback;
-    private Button btnChangeThePassword;
-    private Button btnSignOut;
+    public Button btnPersonalInformation;
+    public Button btnListOfOrders;
+    public Button btnMyWallet;
+    public Button btnMyPoints;
+    public Button btnFeedback;
+    public Button btnChangeThePassword;
+    public Button btnSignOut;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_personal_center, container, false);
+        personalInfoNetworkRequest();
         initView();
         return view;
+    }
+
+    private void personalInfoNetworkRequest() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl()
+                .build()
     }
 
     private void initView() {
@@ -55,45 +69,36 @@ public class PersonalCenterFragment extends Fragment implements View.OnClickList
         btnChangeThePassword = view.findViewById(R.id.btn_change_the_password);
         btnSignOut = view.findViewById(R.id.btn_sign_out);
 
-        btnPersonalInformation.setOnClickListener(this);
-        btnListOfOrders.setOnClickListener(this);
-        btnMyWallet.setOnClickListener(this);
-        btnMyPoints.setOnClickListener(this);
-        btnFeedback.setOnClickListener(this);
-        btnChangeThePassword.setOnClickListener(this);
-        btnSignOut.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View view) {
-        btnPersonalInformation.setOnClickListener(view1 -> {
+        btnPersonalInformation.setOnClickListener(view -> {
             Intent intent = new Intent(requireActivity(), PersonalInformationActivity.class);
             startActivity(intent);
         });
-        btnListOfOrders.setOnClickListener(view2 -> {
+        btnListOfOrders.setOnClickListener(view -> {
             Intent intent = new Intent(requireActivity(), ListOfOrdersActivity.class);
             startActivity(intent);
         });
-        btnMyWallet.setOnClickListener(view3 -> {
+        btnMyWallet.setOnClickListener(view -> {
             Intent intent = new Intent(requireActivity(), MyWalletActivity.class);
             startActivity(intent);
         });
-        btnMyPoints.setOnClickListener(view4 -> {
+        btnMyPoints.setOnClickListener(view -> {
             Intent intent = new Intent(requireActivity(), MyPointsActivity.class);
             startActivity(intent);
         });
-        btnFeedback.setOnClickListener(view5 -> {
+        btnFeedback.setOnClickListener(view -> {
             Intent intent = new Intent(requireActivity(), FeedbackActivity.class);
             startActivity(intent);
         });
-        btnChangeThePassword.setOnClickListener(view6 -> {
+        btnChangeThePassword.setOnClickListener(view -> {
             Intent intent = new Intent(requireActivity(), ChangeThePasswordActivity.class);
             startActivity(intent);
         });
-        btnSignOut.setOnClickListener(view7 -> {
+        btnSignOut.setOnClickListener(view -> {
             Intent intent = new Intent(getContext(), LoginActivity.class);
             startActivity(intent);
             requireActivity().finish();
+            Toast.makeText(requireActivity().getApplicationContext(), "登出成功 请重新登录", Toast.LENGTH_SHORT).show();
         });
     }
+
 }

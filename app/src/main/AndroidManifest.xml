@@ -17,35 +17,35 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ChangeThePasswordActivity"
+            android:name=".ui.ActivityView.ChangeThePasswordActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".FeedbackActivity"
+            android:name=".ui.ActivityView.FeedbackActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MyPointsActivity"
+            android:name=".ui.ActivityView.MyPointsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MyWalletActivity"
+            android:name=".ui.ActivityView.MyWalletActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ListOfOrdersActivity"
+            android:name=".ui.ActivityView.ListOfOrdersActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

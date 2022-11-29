@@ -19,7 +19,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:contentDescription="@string/avatar"
-            android:src="@mipmap/avatar" />
+            android:src="@drawable/ic_baseline_account_circle_24" />
 
         <TextView
             android:id="@+id/tv_personal_username"
