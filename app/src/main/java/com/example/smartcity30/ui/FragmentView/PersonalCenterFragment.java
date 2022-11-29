@@ -14,12 +14,13 @@ import android.widget.TextView;
 
 import com.example.smartcity30.LoginActivity;
 import com.example.smartcity30.R;
-import com.example.smartcity30.fragment.personalCenterPage.ChangeThePasswordFragment;
-import com.example.smartcity30.fragment.personalCenterPage.FeedbackFragment;
-import com.example.smartcity30.fragment.personalCenterPage.ListOfOrdersFragment;
-import com.example.smartcity30.fragment.personalCenterPage.MyPointsFragment;
-import com.example.smartcity30.fragment.personalCenterPage.MyWalletFragment;
-import com.example.smartcity30.fragment.personalCenterPage.PersonalInformationFragment;
+
+import com.example.smartcity30.ui.ActivityView.ChangeThePasswordActivity;
+import com.example.smartcity30.ui.ActivityView.FeedbackActivity;
+import com.example.smartcity30.ui.ActivityView.ListOfOrdersActivity;
+import com.example.smartcity30.ui.ActivityView.MyPointsActivity;
+import com.example.smartcity30.ui.ActivityView.MyWalletActivity;
+import com.example.smartcity30.ui.ActivityView.PersonalInformationActivity;
 
 import java.util.Objects;
 
@@ -66,27 +67,27 @@ public class PersonalCenterFragment extends Fragment implements View.OnClickList
     @Override
     public void onClick(View view) {
         btnPersonalInformation.setOnClickListener(view1 -> {
-            Intent intent = new Intent(requireActivity(), PersonalInformationFragment.class);
+            Intent intent = new Intent(requireActivity(), PersonalInformationActivity.class);
             startActivity(intent);
         });
         btnListOfOrders.setOnClickListener(view2 -> {
-            Intent intent = new Intent(requireActivity(), ListOfOrdersFragment.class);
+            Intent intent = new Intent(requireActivity(), ListOfOrdersActivity.class);
             startActivity(intent);
         });
         btnMyWallet.setOnClickListener(view3 -> {
-            Intent intent = new Intent(requireActivity(), MyWalletFragment.class);
+            Intent intent = new Intent(requireActivity(), MyWalletActivity.class);
             startActivity(intent);
         });
         btnMyPoints.setOnClickListener(view4 -> {
-            Intent intent = new Intent(requireActivity(), MyPointsFragment.class);
+            Intent intent = new Intent(requireActivity(), MyPointsActivity.class);
             startActivity(intent);
         });
         btnFeedback.setOnClickListener(view5 -> {
-            Intent intent = new Intent(requireActivity(), FeedbackFragment.class);
+            Intent intent = new Intent(requireActivity(), FeedbackActivity.class);
             startActivity(intent);
         });
         btnChangeThePassword.setOnClickListener(view6 -> {
-            Intent intent = new Intent(requireActivity(), ChangeThePasswordFragment.class);
+            Intent intent = new Intent(requireActivity(), ChangeThePasswordActivity.class);
             startActivity(intent);
         });
         btnSignOut.setOnClickListener(view7 -> {
